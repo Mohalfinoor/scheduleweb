@@ -734,7 +734,7 @@ body {
   white-space: nowrap;
   color: rgba(0, 0, 0, 0.5);
   margin: 0 1em;
-  font-size: 0.6em;
+  font-size: 0.9em;
 }
 
 .schedule-description {
@@ -767,7 +767,7 @@ body {
   height: 100%;
   color: #858585;
   font-size: 1.8em;
-  font-weight: 500;
+  font-weight: 300;
   padding: 0.8em 0.5em;
 }
 
@@ -781,6 +781,7 @@ body {
   width: 100%;
   height: 35%;
   margin: 0 0 0.15em 0;
+  font-weight: 500;
 }
 
 
@@ -858,3 +859,7 @@ body {
   height: var(--h);
   border-radius: 8px;
 }
+
+
+
+/* Jam --------------------------------------------------------------------------------------------------------------------------------------------------------- */
