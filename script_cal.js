@@ -17,11 +17,15 @@ const renderCalendar = () => {
     for (let i = firstDayofMonth; i > 0; i--) { // creating li of previous month last days
         liTag += `<li class="inactive">${lastDateofLastMonth - i + 1}</li>`;
     }
-    for (let i = 1; i <= lastDateofMonth; i++) { // creating li of all days of current month
-        // adding active class to li if the current day, month, and year matched
+    for (let i = 1; i <= lastDateofMonth; i++) {
+        let currentDateObj = new Date(currYear, currMonth, i);
         let isToday = i === date.getDate() && currMonth === new Date().getMonth() 
-                     && currYear === new Date().getFullYear() ? "active" : "";
-        liTag += `<li class="${isToday}">${i}</li>`;
+                    && currYear === new Date().getFullYear() ? "active" : "";
+
+        let day = currentDateObj.getDay(); // 0 = Sunday, 6 = Saturday
+        let weekendClass = (day === 0 || day === 6) ? " weekend" : "";
+
+        liTag += `<li class="${isToday}${weekendClass}">${i}</li>`;
     }
     for (let i = lastDayofMonth; i < 6; i++) { // creating li of next month first days
         liTag += `<li class="inactive">${i - lastDayofMonth + 1}</li>`
