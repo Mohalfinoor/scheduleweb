@@ -75,9 +75,9 @@
 
 <!-- Nav bar -->
         <div class="navigation-bar">
-          <button onclick="showContent('clock-content')" class="nav-clock">Clock</button>
-          <button onclick="showContent('schedule-content')" class="nav-alrm">Schedule</button>
-          <button onclick="showContent('timer-content')" class="nav-timer">Timer</button>
+          <button onclick="activateTab(this, 'clock-content')" class="nav-btn nav-active">Clock</button>
+          <button onclick="activateTab(this, 'schedule-content')" class="nav-btn">Schedule</button>
+          <button onclick="activateTab(this, 'timer-content')" class="nav-btn">Timer</button>
         </div>
 
 <!-- Jam -->
@@ -112,12 +112,14 @@
 
       <!-- Konten 2 -->
         <div class="page-content" id="schedule-content">
+          <div class="coba-coba1"></div>
           <h2>schedule</h2>
           <p>Set your schedule here.</p>
         </div>
 
       <!-- Konten 3 -->
         <div class="page-content" id="timer-content">
+          <div class="coba-coba2"></div>
           <h2>Timer</h2>
           <p>Set your timers here.</p>
         </div>
