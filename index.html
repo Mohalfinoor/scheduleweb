@@ -74,38 +74,58 @@
       </div>
 
 <!-- Nav bar -->
-      <div class="navigation-bar">
-        <div class="nav-clock">Clock</div>
-        <div class="nav-alrm">Alarm</div>
-        <div class="nav-timer">Timer</div>
-      </div>
+        <div class="navigation-bar">
+          <button onclick="showContent('clock-content')" class="nav-clock">Clock</button>
+          <button onclick="showContent('schedule-content')" class="nav-alrm">Schedule</button>
+          <button onclick="showContent('timer-content')" class="nav-timer">Timer</button>
+        </div>
 
 <!-- Jam -->
-      <div class="jam">
-        <div class="container">
-          <div class="clock">
+      <div class="content-area">
+      <!-- Konten 1 -->
+        <div class="page-content" id="clock-content">
+          <div class="jam">
+            <div class="container">
+              <div class="clock">
 
-            <div style="--clr:#ff3d58; --h:18vw; --w:1vw;" id="hour" class="hand"><i></i></div>
-            <div style="--clr:#00a6ff; --h:22vw; --w:0.8vw;" id="min" class="hand"><i></i></div>
-            <div style="--clr:#000000; --h:26vw; --w:0.5vw;" id="sec" class="hand"><i></i></div>
+                <div style="--clr:#ff3d58; --h:18vw; --w:1vw;" id="hour" class="hand"><i></i></div>
+                <div style="--clr:#00a6ff; --h:22vw; --w:0.8vw;" id="min" class="hand"><i></i></div>
+                <div style="--clr:#000000; --h:26vw; --w:0.5vw;" id="sec" class="hand"><i></i></div>
 
-            <span style="--i:1"><b>1</b></span>
-            <span style="--i:2"><b>2</b></span>
-            <span style="--i:3"><b>3</b></span>
-            <span style="--i:4"><b>4</b></span>
-            <span style="--i:5"><b>5</b></span>
-            <span style="--i:6"><b>6</b></span>
-            <span style="--i:7"><b>7</b></span>
-            <span style="--i:8"><b>8</b></span>
-            <span style="--i:9"><b>9</b></span>
-            <span style="--i:10"><b>10</b></span>
-            <span style="--i:11"><b>11</b></span>
-            <span style="--i:12"><b>12</b></span>
+                <span style="--i:1"><b>1</b></span>
+                <span style="--i:2"><b>2</b></span>
+                <span style="--i:3"><b>3</b></span>
+                <span style="--i:4"><b>4</b></span>
+                <span style="--i:5"><b>5</b></span>
+                <span style="--i:6"><b>6</b></span>
+                <span style="--i:7"><b>7</b></span>
+                <span style="--i:8"><b>8</b></span>
+                <span style="--i:9"><b>9</b></span>
+                <span style="--i:10"><b>10</b></span>
+                <span style="--i:11"><b>11</b></span>
+                <span style="--i:12"><b>12</b></span>
+              </div>
+            </div>
           </div>
+
         </div>
+
+      <!-- Konten 2 -->
+        <div class="page-content" id="schedule-content">
+          <h2>schedule</h2>
+          <p>Set your schedule here.</p>
+        </div>
+
+      <!-- Konten 3 -->
+        <div class="page-content" id="timer-content">
+          <h2>Timer</h2>
+          <p>Set your timers here.</p>
+        </div>
+
       </div>
 
     </div>
     <script src="script.js"></script>
+    <script src="script_conten.js"></script>
   </body>
 </html>
