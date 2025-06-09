@@ -18,12 +18,6 @@ function displayTime() {
     min.style.transform = `rotate(${mRotation}deg)`;
     sec.style.transform = `rotate(${sRotation}deg)`;
 
-    // Update the digital clock display
-    let digital = document.getElementById("digitalClock");
-    let hhStr = String(hh).padStart(2, '0');
-    let mmStr = String(mm).padStart(2, '0');
-    // let ssStr = String(ss).padStart(2, '0');
-    digital.textContent = `${hhStr} : ${mmStr}`;
 }
 
 setInterval(displayTime, 1000);

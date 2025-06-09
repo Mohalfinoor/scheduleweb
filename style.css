@@ -19,7 +19,7 @@ body {
   max-width: 85vw;
   height: fit-content;
   box-sizing: border-box;
-  background-color: #cdcaba36;
+  /* background-color: #cdcaba36; */
   margin-left: auto;
   margin-right: auto;
 }
@@ -345,7 +345,6 @@ button {
 /* Konten 1 */
 /* Jam--------------------------------------------------------------------------------------------------------------------------------------------------------- */
 .jam {
-  margin: 4em 0 0 0;
   padding: 0;
   box-sizing: border-box;
   font-family:"Roboto", Helvetica;
@@ -364,6 +363,7 @@ button {
   position: relative;
   width: 80%;
   height: 80%;
+  margin: 0 0 -16vw 0;
 }
 
 .clock {
@@ -371,7 +371,7 @@ button {
   height: 100%;
   border-radius: 50%;
   background-color: #F0F5F8;
-  border: 2px solid rgb(225, 225, 225, 0.25);
+  border: 0.1px solid rgb(225, 225, 225);
   /* box-shadow: 0px 0px 30px rgba(169, 163, 163, 0.9); */
   box-shadow:  0px 4px 6px rgba(0, 0, 0, 0.1),
     10px 10px 15px rgba(0, 0, 0, 0.2),
@@ -423,43 +423,60 @@ button {
   border-radius: 8px;
 }
 
-/* Jam Digital--------------------------------------------------------------------------------------------------------------------------------------------------------- */
-.digital-clock {
-  position: absolute;
-  width: fit-content;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  margin-bottom: 25vw;
-  padding: 1.5vw 2.5vw;
-  font-size: 4.5vw;
-  font-weight: 300;
-  background-color: #ffffff50;
-  color: #00000065;
-  border-radius: 15px;
-  box-shadow:
-    0px 4px 9px 0px rgba(0, 0, 0, 0.171),
-    inset 0px 4px 9px 0px rgba(0, 0, 0, 0.217);
-}
-
-/* .plus-icon {
-  margin: 0 !important;
+/* Plus Icon--------------------------------------------------------------------------------------------------------------------------------------------------------- */
+.plus-icon {
+  font-size: 50px;
   width: 10vw;
   height: 10vw;
   aspect-ratio: 1 / 1;
   border-radius: 50%;
-  transform: translate(-50%, -50%);
-  background-color: #F0F5F8;
-  box-shadow: 0px 0px 30px rgba(169, 163, 163, 0.9);
-  font-weight: 400;
+  transform: translate(50%, -50%);
+  color: #535353;
+  background-color: #f0f5f8;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1),
+    10px 10px 15px rgba(0, 0, 0, 0.2),
+    20px 20px 30px rgba(0, 0, 0, 0.15),
+    0px -4px 6px rgba(255, 255, 255, 0.488),
+    -10px -10px 15px rgba(255, 255, 255, 0.496),
+    -20px -20px 30px rgba(255, 255, 255, 0.481);
+  font-weight: 200;
+  font-size: 10vw;
+  padding: 0.7vw 0.7vw 1.3vw 0.7vw;
   display: flex;
   align-items: center;
   justify-content: center;
-} */
+  margin-left: 67.5vw;
+}
   
+/* Text--------------------------------------------------------------------------------------------------------------------------------------------------------- */
+.text-con {
+  margin: 14vw 0 10vw 0;
+  width: 100%;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  justify-content: center;
+  font-family:"Roboto", Helvetica;
+  gap: 0.9em;
+}
+
+.city-date {
+  font-size: 4vw;
+  font-weight: 359;
+  color: #00000042;
+  margin-bottom: 0.1em;
+}
+
+.full-date {
+  font-size: 6vw;
+  font-weight:normal;
+  color: #000000;
+  margin-top: 0;
+}
 
 
-/* Konten 2 ()--------------------------------------------------------------------------------------------------------------------------------------------------------- */
+/* Konten 2 */
 .coba-coba1 {
   width: 400px;
   height: 400px;
@@ -471,7 +488,7 @@ button {
   background-color: aqua;
 }
 
-/* Konten 3 ()--------------------------------------------------------------------------------------------------------------------------------------------------------- */
+/* Konten 3 */
 .coba-coba2 {
   width: 400px;
   height: 400px;
