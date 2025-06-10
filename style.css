@@ -343,8 +343,46 @@ button {
 
 
 /* Konten 1 */
+/* Flip Card */
+.flip-card {
+  background-color: transparent;
+  width: 100%;
+  height: 100%;
+  perspective: 1000px;
+}
+
+.flip-card-inner {
+  position: relative;
+  display: grid;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  transition: transform 0.6s;
+  transform-style: preserve-3d;
+}
+
+.flip-card.flipped .flip-card-inner {
+  transform: rotateY(180deg);
+}
+
+.flip-card-front, .flip-card-back {
+  grid-row: 1 / 2;
+  grid-column: 1 / 2;
+  position: relative;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.flip-card-back {
+  transform: rotateY(180deg);
+}
+
 /* Jam--------------------------------------------------------------------------------------------------------------------------------------------------------- */
-.jam {
+.jam, .jam2 {
   padding: 0;
   box-sizing: border-box;
   font-family:"Roboto", Helvetica;
@@ -363,7 +401,7 @@ button {
   position: relative;
   width: 80%;
   height: 80%;
-  margin: 0 0 -16vw 0;
+  margin: 0 0 -16vw -0.2vw;
 }
 
 .clock {
@@ -382,6 +420,11 @@ button {
   display: flex;
   justify-content: center;
   align-items: center;
+}
+
+.jam2 .clock {
+  color: #ffffff;
+  background-color: #242424;
 }
 
 .clock span {
@@ -423,6 +466,43 @@ button {
   border-radius: 8px;
 }
 
+/* Isi Konten Jam*/
+.konten-jam1 {
+  position: absolute;
+  width: 67%;
+  aspect-ratio: 1;
+  display: flex;
+  text-align: center;
+  justify-content: center;
+  margin: 0 0 -16.5vw 0;
+  border-radius: 50%;
+  background: conic-gradient(
+    rgba(0, 60, 255, 0.305) 0deg 60deg,
+    transparent 60deg 360deg
+  );
+  transform: rotate(30deg);
+  z-index: 1;
+}
+
+.konten-jam2 {
+  position: absolute;
+  width: 67%;
+  aspect-ratio: 1;
+  display: flex;
+  text-align: center;
+  justify-content: center;
+  margin: 0 0 -16.5vw 0;
+  border-radius: 50%;
+  background: conic-gradient(
+    rgba(255, 0, 38, 0.305) 0deg 30deg,
+    transparent 30deg 360deg
+  );
+  transform: rotate(0deg);
+  z-index: 1;
+}
+
+
+
 /* Plus Icon--------------------------------------------------------------------------------------------------------------------------------------------------------- */
 .plus-icon {
   font-size: 50px;
@@ -447,10 +527,12 @@ button {
   justify-content: center;
   margin-left: 67.5vw;
 }
+
+
   
 /* Text--------------------------------------------------------------------------------------------------------------------------------------------------------- */
 .text-con {
-  margin: 14vw 0 10vw 0;
+  margin: 24vw 0 14vw 0;
   width: 100%;
   height: auto;
   display: flex;

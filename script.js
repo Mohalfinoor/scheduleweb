@@ -2,6 +2,10 @@ let hr = document.getElementById("hour");
 let min = document.getElementById("min");
 let sec = document.getElementById("sec");
 
+let hr2 = document.getElementById("hour2");
+let min2 = document.getElementById("min2");
+let sec2 = document.getElementById("sec2");
+
 function displayTime() {
     let date = new Date();
 
@@ -14,10 +18,25 @@ function displayTime() {
     let mRotation = 6*mm;
     let sRotation = 6*ss;
 
+    // Jam pertama
     hr.style.transform = `rotate(${hRotation}deg)`;
     min.style.transform = `rotate(${mRotation}deg)`;
     sec.style.transform = `rotate(${sRotation}deg)`;
 
+    // Jam kedua
+    hr2.style.transform = `rotate(${hRotation}deg)`;
+    min2.style.transform = `rotate(${mRotation}deg)`;
+    sec2.style.transform = `rotate(${sRotation}deg)`;
 }
 
 setInterval(displayTime, 1000);
+
+
+
+
+// Click Jam
+document.querySelectorAll('.flip-card').forEach(card => {
+  card.addEventListener('click', function() {
+    card.classList.toggle('flipped');
+  });
+});
