@@ -473,7 +473,7 @@ button {
 /* Isi Konten Jam*/
 .konten-jam1 {
   position: absolute;
-  width: 67%;
+  width: 80%;
   aspect-ratio: 1;
   display: flex;
   text-align: center;
@@ -484,13 +484,13 @@ button {
     rgba(0, 60, 255, 0.305) 0deg 60deg,
     transparent 60deg 360deg
   );
-  transform: rotate(30deg);
+  transform: rotate(0deg);
   z-index: 1;
 }
 
 .konten-jam2 {
   position: absolute;
-  width: 67%;
+  width: 80%;
   aspect-ratio: 1;
   display: flex;
   text-align: center;
@@ -498,11 +498,43 @@ button {
   margin: 0 0 -16.5vw 0;
   border-radius: 50%;
   background: conic-gradient(
-    rgba(255, 0, 38, 0.305) 0deg 30deg,
-    transparent 30deg 360deg
+    rgba(255, 0, 38, 0.305) 0deg 90deg,
+    transparent 90deg 360deg
   );
-  transform: rotate(0deg);
+  transform: rotate(60deg);
   z-index: 1;
+}
+
+
+/* Konten Jam */
+.konten-jam1 span {
+  position: absolute;
+  transform: rotate(30deg);
+  inset: 20px;
+  text-align: center;
+}
+
+.konten-jam1 span b{
+  transform: rotate(-30deg);
+  display: inline-block;
+  font-size: 3.5vw;
+  margin-top: 8vw;
+  color: #00000056;
+}
+
+.konten-jam2 span {
+  position: absolute;
+  transform: rotate(45deg);
+  inset: 20px;
+  text-align: center;
+}
+
+.konten-jam2 span b{
+  transform: rotate(-105deg);
+  display: inline-block;
+  font-size: 3.5vw;
+  margin-top: 8vw;
+  color: #00000056;
 }
 
 
@@ -532,7 +564,152 @@ button {
   margin-left: 67.5vw;
 }
 
+.plus-icon:hover {
+  cursor: pointer;
+  background-color: #ffffff;
+  color: #000000;
+}
 
+.plus-icon:active {
+  opacity: 0.8;
+}
+
+
+
+/* Form Conten */
+.content-form {
+  background-color: rgba(0, 0, 0, 0.3);
+  /* opacity: 0; */
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  transition: all 0.3 ease-in-out;
+  /* z-index: -1; */
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.content-form.open {
+  opacity: 1;
+  z-index: 999;
+}
+
+.form-inner {
+  background-color: #ffffff;
+  border-radius: 25px;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.3);
+  padding: 7vw 7vw 10vw 7vw;
+  width: 70vw;
+}
+
+.form-inner {
+  line-height: 24px;
+  margin: 10px 0;
+}
+
+.header-form {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 3vw;
+  border-bottom: 1px solid #ccc;
+}
+
+.label-title {
+  margin-bottom: 0;
+  font-size: 4vw;
+}
+
+.title-form-input, .date-form-input {
+  width: 95%;
+  height: 7.5vw;
+  border-radius: 5px;
+  padding: 0 3vw;
+  font-size: 3.5vw;
+}
+
+.time-form {
+  display: flex;
+  font-size: 4.5vw;
+}
+
+.time-form-input {
+  width: 90%;
+  height: 7.5vw;
+  border-radius: 5px;
+  padding: 0 2vw;
+  font-size: 3.5vw;
+}
+
+.form-inner h3 {
+  font-size: 3.5vw;
+  font-weight: 599;
+}
+
+.time_start-input {
+  width: 40%;
+  margin-left: 0;
+  margin-right: auto;
+  display: block;
+}
+
+.time_end-input {
+  width: 40%;
+  margin-left: auto;
+  margin-right: 0;
+  display: block;
+}
+
+.button-inner {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 7vw;
+  height: 7vw;
+  border-radius: 50%;
+  border: 2px solid #333;
+}
+
+.color-picker {
+  width: 5.5vw;
+  height: 5.5vw;
+  border-radius: 50%;
+  background-color: #66785F;
+  display: inline-block;
+  cursor: pointer;
+}
+
+.button-form {
+  width: fit-content;
+  display: flex;
+  margin-left: auto;
+  margin-right: 0;
+  justify-content: space-between;
+  font-size: 3vw;
+}
+
+.cancel-form {
+  width: 100%;
+  margin-right: 3vw;
+  padding: 0 3vw;
+  color: #66785F;
+  background-color: #ffffff;
+  border: 0.4vw solid #66785F;
+  border-radius: 4px;
+}
+
+.save-form {
+  width: 100%;
+  padding: 0 3vw;
+  color: #ffffff;
+  background-color: #66785F;
+  border: 0.4vw solid #000000;
+  border-radius: 4px;
+}
   
 /* Text--------------------------------------------------------------------------------------------------------------------------------------------------------- */
 .text-con {
@@ -572,7 +749,7 @@ button {
   text-align: start;
   margin-top: 50vw;
   font-size: 12vw;
-  color: #2d2d2d;
+  color: #474747;
   font-weight: 250;
 }
 

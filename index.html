@@ -115,8 +115,13 @@
                     </div>
                   </div>
 
-                  <!-- <div class="konten-jam1"></div>
-                  <div class="konten-jam2"></div> -->
+                  <div class="konten-jam1">
+                    <span><b>Kuliah</b></span>
+                  </div>
+
+                  <div class="konten-jam2">
+                    <span><b>game</b></span>
+                  </div>
                   
                 </div>
               </div>
@@ -155,10 +160,46 @@
           </div>
 
   <!-- Plus Button -->
-          <button class="plus-icon">+</button>
+          <button class="plus-icon" id="open-form">+</button>
 
     <!-- Conten Form -->
-          <div class="dialog__conten"></div>
+          <div class="content-form" id="content-form">
+            <div class="form-inner">
+              <div class="header-form">
+                <h2 class="title-form">Create Event</h2>
+                <button id="close-form">X</button>
+              </div>
+              <div class="title-input">
+                <h3 class="label-title">Title</h3>
+                <input type="text" id="name-event" class="title-form-input" name="Title" placeholder="My Event In This Day!">
+              </div>
+              <div class="date-input">
+                <h3 class="label-title">Date</h3>
+                <input type="date" id="date-form" class="date-form-input" name="Date">
+              </div>
+              <div class="time-form">
+                <div class="time_start-input">
+                  <h3 class="label-title">Start time</h3>
+                  <input type="time" id="time_start-form" class="time-form-input" name="Time Start">
+                </div>
+                <div class="time_end-input">
+                  <h3 class="label-title">Start end</h3>
+                  <input type="time" id="time_end-form" class="time-form-input" name="Time End">
+                </div>
+              </div>
+              <div class="color-input">
+                <h3 class="label-title">Color</h3>
+                <div class="button-inner">
+                  <label for="color-form" class="color-picker"></label>
+                  <input type="color" id="color-form" class="color-form" style="display:none;" name="Color">
+                </div>
+              </div>
+              <div class="button-form">
+                <button id="cancel-form" class="cancel-form">Cancel</button>
+                <button id="save-form" class="save-form">Save</button>
+              </div>
+            </div>
+          </div>
   
 
   <!-- Teks -->
